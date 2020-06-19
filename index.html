@@ -8,7 +8,7 @@
 	<link rel="icon" href="static\pictures\logo\logo3-1.png">
 </head>
 <body>
-	<div class="d-block d-lg-none">
+	<div class="">
 	<nav class="navbar navbar-expand-lg navbar-light border-bottom">
 		<a class="navbar-brand py-0" href="https://get4flo.github.io/">
 			<img src="static\pictures\logo\logo3-1.png">
@@ -19,18 +19,21 @@
 
 		<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-				<li class="nav-item active py-md-2 ml-md-3">
+				<li class="nav-item active px-md-2 ml-md-3">
 					<a class="nav-link" href="#">Gallerie<span class="sr-only">(current)</span></a>
 				</li>
-				<li class="nav-item py-md-2">
+				<li class="nav-item px-md-2">
 					<a class="nav-link" href="#kuenstler">Künstler</a>
 				</li>
-				<li class="nav-item py-md-2">
+				<li class="nav-item px-md-2">
 					<a class="nav-link" href="#impressum">Impressum</a>
 				</li>
 			</ul>
 			<form class="form-inline my-2 my-lg-0">
-				<a class="d-none d-md-block" href="mailto:florianhoffmann97@yahoo.com">
+				<a class="px-2" href="https://www.pinterest.de/hansjrgenseifer/arnulf-hoffmann-mobile-skulpturen/">
+					<span style="color: #E60023"><i class="fab fa-pinterest fa-2x"></i></span>
+				</a>
+				<a class="px-3 mr-2" href="mailto:florianhoffmann97@yahoo.com">
 					<span style="color: Grey;"><i class="fas fa-envelope fa-2x"></i></span>
 				</a>
 				<!-- <input class="form-control mr-sm-2" type="search" placeholder="Search">
@@ -39,7 +42,7 @@
 			</div>
 		</nav>
 		</div>
-		<div class="d-none d-lg-block">
+		<!-- <div class="d-none d-lg-block">
 			<div style="background-image: url('static/pictures/opa-pendel1-1.jpg'); height: 600px; background-repeat: no-repeat; background-size: cover; background-position: top center;">
 				<div class="container pt-3 pr-5">
 					<div class="row justify-content-center">
@@ -60,9 +63,32 @@
 					</div>
 				</div>
 			</div>			
+		</div> -->
+		<div class="d-none d-md-block">
+		<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img class="d-block w-100" src="static/pictures/opa-pendel1-1-cut.jpg" alt="First slide">
+				</div>
+				<div class="carousel-item">
+					<img class="d-block w-100" src="static/pictures/opa-pendel1-1-cut.jpg" alt="Second slide">
+				</div>
+				<div class="carousel-item">
+					<img class="d-block w-100" src="static/pictures/opa-pendel1-1-cut.jpg" alt="Third slide">
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
 		</div>
 
-		<div class="container-fluid py-4" id="gallery">
+		<div class="container-lg py-4" id="gallery">
 			<div class="py-4 pl-3">
 				<div class="row justify-content-center">
 					<div class="col-xs-10 col-lg-8">
@@ -73,14 +99,27 @@
 				
 			</div>
 
+			<hr style="width:80%;background-color:gray;text-align:center; margin-top: 100px; margin-bottom: 150px;">
+
+			<div class="row justify-content-center">
+				<div class="col-2">
+					<h3 class="py-4" style="text-align: center">Natur</h3>
+				</div>
+			</div>
+			
 			<div class="row py-lg-4">
 				<div class="col-lg py-2 py-lg-0">
 					<div class="card">
 						<img class="card-img-top" src="static\pictures\IMG_5062.jpg">
 						<div class="card-body">
-							<h5 class="card-title">#1</h5>
-							<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-							<a href="#" class="btn btn-secondary">Go somewhere</a>
+							<div class="row align-items-center">
+								<div class="col">
+									<h5 class=" m-0">#1</h5>
+								</div>
+								<div class="col">
+									<span style="display: flex;flex-direction: row-reverse;"><a href="mailto:name@bla.de?subject=Anfrage Bild #1" class="btn btn-dark btn-sm pr-2">Anfragen</a></span>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -88,9 +127,29 @@
 					<div class="card">
 						<img class="card-img-top" src="static\pictures\IMG_5063.jpg">
 						<div class="card-body">
-							<h5 class="card-title">#2</h5>
-							<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-							<a href="#" class="btn btn-secondary">Go somewhere</a>
+							<div class="row align-items-center">
+								<div class="col">
+									<h5 class=" m-0">#2</h5>
+								</div>
+								<div class="col">
+									<span style="display: flex;flex-direction: row-reverse;"><a href="mailto:name@bla.de?subject=Anfrage Bild #2" class="btn btn-dark btn-sm pr-2">Anfragen</a></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg py-2 py-lg-0">
+					<div class="card">
+						<img class="card-img-top" src="static\pictures\IMG_5064.jpg">
+						<div class="card-body">
+							<div class="row align-items-center">
+								<div class="col">
+									<h5 class=" m-0">#3</h5>
+								</div>
+								<div class="col">
+									<span style="display: flex;flex-direction: row-reverse;"><a href="mailto:name@bla.de?subject=Anfrage Bild #3" class="btn btn-dark btn-sm pr-2">Anfragen</a></span>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -99,48 +158,106 @@
 			<div class="row py-lg-4">
 				<div class="col-lg py-2 py-lg-0">
 					<div class="card">
-						<img class="card-img-top" src="static\pictures\IMG_5064.jpg">
-						<div class="card-body">
-							<h5 class="card-title">#3</h5>
-							<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-							<a href="#" class="btn btn-secondary">Go somewhere</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg py-2 py-lg-0">
-					<div class="card">
 						<img class="card-img-top" src="static\pictures\IMG_5065.jpg">
 						<div class="card-body">
-							<h5 class="card-title">#4</h5>
-							<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-							<a href="#" class="btn btn-secondary">Go somewhere</a>
+							<div class="row align-items-center">
+								<div class="col">
+									<h5 class=" m-0">#4</h5>
+								</div>
+								<div class="col">
+									<span style="display: flex;flex-direction: row-reverse;"><a href="mailto:name@bla.de?subject=Anfrage Bild #4" class="btn btn-dark btn-sm pr-2">Anfragen</a></span>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="row">
 				<div class="col-lg py-2 py-lg-0">
 					<div class="card">
 						<img class="card-img-top" src="static\pictures\IMG_5067.jpg">
 						<div class="card-body">
-							<h5 class="card-title">#5</h5>
-							<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-							<a href="#" class="btn btn-secondary">Go somewhere</a>
+							<div class="row align-items-center">
+								<div class="col">
+									<h5 class=" m-0">#5</h5>
+								</div>
+								<div class="col">
+									<span style="display: flex;flex-direction: row-reverse;"><a href="mailto:name@bla.de?subject=Anfrage Bild #5" class="btn btn-dark btn-sm pr-2">Anfragen</a></span>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-lg pt-2 py-lg-0">
+				<div class="col-lg py-2 py-lg-0">
 					<div class="card">
 						<img class="card-img-top" src="static\pictures\IMG_5068.jpg">
 						<div class="card-body">
-							<h5 class="card-title">#6</h5>
-							<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-							<a href="#" class="btn btn-secondary">Go somewhere</a>
+							<div class="row align-items-center">
+								<div class="col">
+									<h5 class=" m-0">#6</h5>
+								</div>
+								<div class="col">
+									<span style="display: flex;flex-direction: row-reverse;"><a href="mailto:name@bla.de?subject=Anfrage Bild #6" class="btn btn-dark btn-sm pr-2">Anfragen</a></span>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- <div style="padding-top: 100px;"></div> -->
+
+			<div class="row py-lg-4">
+				<div class="col-lg py-2 py-lg-0">
+					<div class="card">
+						<img class="card-img-top" src="static\pictures\IMG_5069.jpg">
+						<div class="card-body">
+							<div class="row align-items-center">
+								<div class="col">
+									<h5 class=" m-0">#7</h5>
+								</div>
+								<div class="col">
+									<span style="display: flex;flex-direction: row-reverse;"><a href="mailto:name@bla.de?subject=Anfrage Bild #7" class="btn btn-dark btn-sm pr-2">Anfragen</a></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg py-2 py-lg-0">
+					<div class="card">
+						<img class="card-img-top" src="static\pictures\IMG_5070.jpg">
+						<div class="card-body">
+							<div class="row align-items-center">
+								<div class="col">
+									<h5 class=" m-0">#8</h5>
+								</div>
+								<div class="col">
+									<span style="display: flex;flex-direction: row-reverse;"><a href="mailto:name@bla.de?subject=Anfrage Bild #8" class="btn btn-dark btn-sm pr-2">Anfragen</a></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg py-2 py-lg-0">
+					<div class="card">
+						<img class="card-img-top" src="static\pictures\IMG_5071.jpg">
+						<div class="card-body">
+							<div class="row align-items-center">
+								<div class="col">
+									<h5 class=" m-0">#9</h5>
+								</div>
+								<div class="col">
+									<span style="display: flex;flex-direction: row-reverse;"><a href="mailto:name@bla.de?subject=Anfrage Bild #9" class="btn btn-dark btn-sm pr-2">Anfragen</a></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div style="padding-top: 50px; padding-bottom: 50px"></div>
+
+		<div class="row justify-content-center">
+			<div class="col-2">
+				<h3 class="py-4" style="text-align: center">Bäume</h3>
+			</div>
 		</div>
 
 		<hr class="my-lg-5" style="width:80%;background-color:gray;text-align:center;">
