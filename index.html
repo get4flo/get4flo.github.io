@@ -3,9 +3,12 @@
 <head>
 	<title>AH-ArtGallery</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="static\css\style.css">
+	<link rel="stylesheet" type="text/css" href="static\scc\viewer.css">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="static\pictures\logo\logo3-1.png">
+	<script type="text/javascript" src="static\js\viewer.js"></script>
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light border-bottom">
@@ -67,7 +70,18 @@
 		</div>
 		</div>
 
-		<div class="container-lg py-4" id="gallery">
+		<div id="overlay">
+			<div class="container" style="height: 100%">
+				<div class="row" style="height: 100%">
+					<div class="col align-self-center">
+						<img src="" class="img-fluid" id="fullviewContainer">
+					</div>
+				</div>
+			</div>
+			
+		</div>
+
+		<div class="container-lg py-4 gallery" id="gallery">
 			<div class="py-4 pl-3">
 				<div class="row justify-content-center">
 					<div class="col-xs-10 col-lg-8">
@@ -89,7 +103,9 @@
 			<div class="row py-lg-4">
 				<div class="col-lg py-2 py-lg-0">
 					<div class="card">
-						<img class="card-img-top" src="static\pictures\IMG_5062.jpg">
+						<div>
+							<img class="card-img-top shadowh" src="static\pictures\IMG_5062.jpg" id="" alt="Picture">
+						</div>
 						<div class="card-body">
 							<div class="row align-items-center">
 								<div class="col">
@@ -104,7 +120,7 @@
 				</div>
 				<div class="col-lg py-2 py-lg-0">
 					<div class="card">
-						<img class="card-img-top" src="static\pictures\IMG_5063.jpg">
+						<img class="card-img-top shadowh" src="static\pictures\IMG_5063.jpg">
 						<div class="card-body">
 							<div class="row align-items-center">
 								<div class="col">
@@ -119,7 +135,7 @@
 				</div>
 				<div class="col-lg py-2 py-lg-0">
 					<div class="card">
-						<img class="card-img-top" src="static\pictures\IMG_5064.jpg">
+						<img class="card-img-top shadowh" src="static\pictures\IMG_5064.jpg">
 						<div class="card-body">
 							<div class="row align-items-center">
 								<div class="col">
@@ -137,7 +153,7 @@
 			<div class="row py-lg-4">
 				<div class="col-lg py-2 py-lg-0">
 					<div class="card">
-						<img class="card-img-top" src="static\pictures\IMG_5065.jpg">
+						<img class="card-img-top shadowh" src="static\pictures\IMG_5065.jpg">
 						<div class="card-body">
 							<div class="row align-items-center">
 								<div class="col">
@@ -152,7 +168,7 @@
 				</div>
 				<div class="col-lg py-2 py-lg-0">
 					<div class="card">
-						<img class="card-img-top" src="static\pictures\IMG_5067.jpg">
+						<img class="card-img-top shadowh" src="static\pictures\IMG_5067.jpg">
 						<div class="card-body">
 							<div class="row align-items-center">
 								<div class="col">
@@ -167,7 +183,7 @@
 				</div>
 				<div class="col-lg py-2 py-lg-0">
 					<div class="card">
-						<img class="card-img-top" src="static\pictures\IMG_5068.jpg">
+						<img class="card-img-top shadowh" src="static\pictures\IMG_5068.jpg">
 						<div class="card-body">
 							<div class="row align-items-center">
 								<div class="col">
@@ -185,7 +201,7 @@
 			<div class="row py-lg-4">
 				<div class="col-lg py-2 py-lg-0">
 					<div class="card">
-						<img class="card-img-top" src="static\pictures\IMG_5069.jpg">
+						<img class="card-img-top shadowh" src="static\pictures\IMG_5069.jpg">
 						<div class="card-body">
 							<div class="row align-items-center">
 								<div class="col">
@@ -200,7 +216,7 @@
 				</div>
 				<div class="col-lg py-2 py-lg-0">
 					<div class="card">
-						<img class="card-img-top" src="static\pictures\IMG_5070.jpg">
+						<img class="card-img-top shadowh" src="static\pictures\IMG_5070.jpg">
 						<div class="card-body">
 							<div class="row align-items-center">
 								<div class="col">
@@ -215,7 +231,7 @@
 				</div>
 				<div class="col-lg py-2 py-lg-0">
 					<div class="card">
-						<img class="card-img-top" style="filter: brightness(90%);" src="static\pictures\logo\plus2.png">
+						<img class="card-img-top shadowh" style="filter: brightness(90%);" src="static\pictures\logo\plus2.png">
 						<div class="card-body">
 							<div class="row align-items-center">
 								<div class="col">
@@ -245,7 +261,7 @@
 			<div class="row py-lg-4">
 				<div class="col-lg py-2 py-lg-0">
 					<div class="card">
-						<img class="card-img-top" src="static\pictures\trees\IMG_5082.jpg">
+						<img class="card-img-top shadowh" src="static\pictures\trees\IMG_5082.jpg">
 						<div class="card-body">
 							<div class="row align-items-center">
 								<div class="col">
@@ -260,7 +276,7 @@
 				</div>
 				<div class="col-lg py-2 py-lg-0">
 					<div class="card">
-						<img class="card-img-top" src="static\pictures\trees\IMG_5095.jpg">
+						<img class="card-img-top shadowh" src="static\pictures\trees\IMG_5095.jpg">
 						<div class="card-body">
 							<div class="row align-items-center">
 								<div class="col">
@@ -275,7 +291,7 @@
 				</div>
 				<div class="col-lg py-2 py-lg-0">
 					<div class="card">
-						<img class="card-img-top border-bottom" src="static\pictures\trees\IMG_5173+bg.jpg">
+						<img class="card-img-top border-bottom shadowh" src="static\pictures\trees\IMG_5173+bg.jpg">
 						<div class="card-body">
 							<div class="row align-items-center">
 								<div class="col">
@@ -293,7 +309,7 @@
 			<div class="row py-lg-4">
 				<div class="col-lg py-2 py-lg-0">
 					<div class="card">
-						<img class="card-img-top border-bottom" src="static\pictures\trees\IMG_5176-edit.jpg">
+						<img class="card-img-top border-bottom shadowh" src="static\pictures\trees\IMG_5176-edit.jpg">
 						<div class="card-body">
 							<div class="row align-items-center">
 								<div class="col">
@@ -308,7 +324,7 @@
 				</div>
 				<div class="col-lg py-2 py-lg-0">
 					<div class="card">
-						<img class="card-img-top border-bottom" src="static\pictures\trees\IMG_5177-edit.jpg">
+						<img class="card-img-top border-bottom shadowh" src="static\pictures\trees\IMG_5177-edit.jpg">
 						<div class="card-body">
 							<div class="row align-items-center">
 								<div class="col">
@@ -323,7 +339,7 @@
 				</div>
 				<div class="col-lg py-2 py-lg-0">
 					<div class="card">
-						<img class="card-img-top border-bottom" src="static\pictures\trees\IMG_5180-edit.jpg">
+						<img class="card-img-top border-bottom shadowh" src="static\pictures\trees\IMG_5180-edit.jpg">
 						<div class="card-body">
 							<div class="row align-items-center">
 								<div class="col">
@@ -341,7 +357,7 @@
 			<div class="row py-lg-4">
 				<div class="col-lg py-2 py-lg-0">
 					<div class="card">
-						<img class="card-img-top border-bottom" src="static\pictures\trees\IMG_5181-edit.jpg">
+						<img class="card-img-top border-bottom shadowh" src="static\pictures\trees\IMG_5181-edit.jpg">
 						<div class="card-body">
 							<div class="row align-items-center">
 								<div class="col">
@@ -356,7 +372,7 @@
 				</div>
 				<div class="col-lg py-2 py-lg-0">
 					<div class="card">
-						<img class="card-img-top border-bottom" src="static\pictures\trees\IMG_5182-edit.jpg">
+						<img class="card-img-top border-bottom shadowh" src="static\pictures\trees\IMG_5182-edit.jpg">
 						<div class="card-body">
 							<div class="row align-items-center">
 								<div class="col">
@@ -371,7 +387,7 @@
 				</div>
 				<div class="col-lg py-2 py-lg-0">
 					<div class="card">
-						<img class="card-img-top border-bottom" src="static\pictures\trees\IMG_5183-edit.jpg">
+						<img class="card-img-top border-bottom shadowh" src="static\pictures\trees\IMG_5183-edit.jpg">
 						<div class="card-body">
 							<div class="row align-items-center">
 								<div class="col">
@@ -405,7 +421,7 @@
 			<div class="row py-lg-4">
 				<div class="col-lg py-2 py-lg-0">
 					<div class="card">
-						<img class="card-img-top border-bottom" src="static\pictures\heads\IMG_5087-edit.jpg">
+						<img class="card-img-top border-bottom shadowh" src="static\pictures\heads\IMG_5087-edit.jpg">
 						<div class="card-body">
 							<div class="row align-items-center">
 								<div class="col">
@@ -420,7 +436,7 @@
 				</div>
 				<div class="col-lg py-2 py-lg-0">
 					<div class="card">
-						<img class="card-img-top border-bottom" src="static\pictures\heads\IMG_5089-edit.jpg">
+						<img class="card-img-top border-bottom shadowh" src="static\pictures\heads\IMG_5089-edit.jpg">
 						<div class="card-body">
 							<div class="row align-items-center">
 								<div class="col">
@@ -435,7 +451,7 @@
 				</div>
 				<div class="col-lg py-2 py-lg-0">
 					<div class="card">
-						<img class="card-img-top" src="static\pictures\heads\IMG_5116.jpg">
+						<img class="card-img-top shadowh" src="static\pictures\heads\IMG_5116.jpg">
 						<div class="card-body">
 							<div class="row align-items-center">
 								<div class="col">
@@ -453,7 +469,7 @@
 			<div class="row py-lg-4">
 				<div class="col-lg py-2 py-lg-0">
 					<div class="card">
-						<img class="card-img-top border-bottom" src="static\pictures\heads\IMG_5119-edit.jpg">
+						<img class="card-img-top border-bottom shadowh" src="static\pictures\heads\IMG_5119-edit.jpg">
 						<div class="card-body">
 							<div class="row align-items-center">
 								<div class="col">
@@ -468,7 +484,7 @@
 				</div>
 				<div class="col-lg py-2 py-lg-0">
 					<div class="card">
-						<img class="card-img-top" src="static\pictures\heads\IMG_5122.jpg">
+						<img class="card-img-top shadowh" src="static\pictures\heads\IMG_5122.jpg">
 						<div class="card-body">
 							<div class="row align-items-center">
 								<div class="col">
@@ -483,7 +499,7 @@
 				</div>
 				<div class="col-lg py-2 py-lg-0">
 					<div class="card">
-						<img class="card-img-top" src="static\pictures\heads\IMG_5124.jpg">
+						<img class="card-img-top shadowh" src="static\pictures\heads\IMG_5124.jpg">
 						<div class="card-body">
 							<div class="row align-items-center">
 								<div class="col">
@@ -501,7 +517,7 @@
 			<div class="row py-lg-4">
 				<div class="col-lg py-2 py-lg-0">
 					<div class="card">
-						<img class="card-img-top border-bottom" src="static\pictures\heads\IMG_5125.jpg">
+						<img class="card-img-top border-bottom shadowh" src="static\pictures\heads\IMG_5125.jpg">
 						<div class="card-body">
 							<div class="row align-items-center">
 								<div class="col">
@@ -516,7 +532,7 @@
 				</div>
 				<div class="col-lg py-2 py-lg-0">
 					<div class="card">
-						<img class="card-img-top border-bottom" src="static\pictures\heads\IMG_5127-edit.jpg">
+						<img class="card-img-top border-bottom shadowh" src="static\pictures\heads\IMG_5127-edit.jpg">
 						<div class="card-body">
 							<div class="row align-items-center">
 								<div class="col">
@@ -531,7 +547,7 @@
 				</div>
 				<div class="col-lg py-2 py-lg-0">
 					<div class="card">
-						<img class="card-img-top border-bottom" src="static\pictures\heads\IMG_5128-edit.jpg">
+						<img class="card-img-top border-bottom shadowh" src="static\pictures\heads\IMG_5128-edit.jpg">
 						<div class="card-body">
 							<div class="row align-items-center">
 								<div class="col">
@@ -581,6 +597,7 @@
 			</div>
 		</div>
 
+		<script type="text/javascript" src="static\js\runViewer.js"></script>
 		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
