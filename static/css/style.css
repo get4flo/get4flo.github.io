@@ -16,6 +16,10 @@ body{
   cursor: pointer; /* Add a pointer on hover */
 }
 
+.shadowh {
+	cursor: pointer;
+}
+
 .shadowh:hover{
 	filter: brightness(90%)
 }
