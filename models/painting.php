@@ -1,29 +1,27 @@
 <?php
-include '../db.php';
+
 $error = 0;
 $errorMessage = "";
 $product_id = 0;
+$method = $_SERVER['REQUEST_METHOD'];
 
-if(array_count_values($_GET)==0){
-	$error = 1;
-	$errorMessage = "Argument fehlt";
+include '../db.php';
+
+if($method == 'GET'){
+	if(array_count_values($_GET)==0){
+		$error = 1;
+		$errorMessage = "Argument fehlt";
+	}
+	if(!(array_key_exists('p', $_GET)) && $error == 0){
+		$error = 1;
+		$errorMessage = "Argument p wurde nicht gesetzt";
+	} else {
+		$product_id = $_GET['p'];
+	}
 }
-if(!(array_key_exists('p', $_GET)) && $error == 0){
-	$error = 1;
-	$errorMessage = "Argument p wurde nicht gesetzt";
-} else {
-	$product_id = $_GET['p'];
-}
+
 $sql = "select * FROM paintings where paintings_id = $product_id";
-$sqlSize = "select count(*) FROM paintings";
-
-if (mysqli_connect_errno() != 0 && $error == 0) {
-	global $error;
-	$error = 1;
-	echo "<p><b> Mysql-Error </b></p>";
-	echo "Errno: " . $con->connect_errno . "\n";
-	echo "Error: " . $con->connect_error . "\n";
-} 
+$sqlSize = "select count(*) FROM paintings"; 
 
 $sizeObj = $con->query($sqlSize);
 $size = $sizeObj->fetch_assoc()['count(*)'];

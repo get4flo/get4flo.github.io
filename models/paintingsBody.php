@@ -30,7 +30,7 @@
 						<input type="Email" class="form-control" name="email">
 					</div>
 					<div class="d-none">
-						<input type="number" name="paintId" <?php echo "default=\"$paintId\""?>>
+						<input type="number" name="paintId" <?php echo "value=\"$paintId\""?>>
 					</div>
 					<button type="submit" class="btn btn-primary" id="">Anfrage absenden</button>
 				</form>
@@ -133,7 +133,17 @@
 							</div>
 						</div>
 						<div class="text-center"><label style="font-size: small; color:grey;"><i class="fas fa-info-circle"></i> Generelle Preisinformationen</label></div>
-						<div class="text-center"><button id="requestButton" type="button" class="btn btn-dark">Anfragen</button></div>
+						<div class="text-center">
+							<button id="requestButton" type="button" class="btn btn-dark">Anfragen</button>
+						</div>
+						<?php 
+							if(array_key_exists('r', $_GET)){
+								echo '<div class="text-center mt-4">
+									<p class="m-0"><span style="color: green;"><i class="fas fa-check"></i></span> Anfrage erfolgreich</p>
+								</div>';
+							}
+						
+						?>
 					</div>
 				</div>
 
