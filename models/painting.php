@@ -49,7 +49,7 @@ if($error == 0) {
 <head>
 	<title>AH-ArtGallery</title>
 	<link rel="stylesheet" href="..\static\css\library\bootstrap.min.css">
-	<!--<link rel="stylesheet" type="text/css" href="..\static\css\style.css">-->
+	<link rel="stylesheet" type="text/css" href="..\static\css\painting.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="..\static\pictures\logo\logo3-1.png">
 </head>

@@ -11,9 +11,9 @@
 
 ?>
 <div id="request" style="display:none;">
-	<div class="d-flex align-items-center" style="z-index: 2; height: 100%; width: 100%; position: fixed;background-color: rgba(0,0,0,0.8);top: 0;left:0;right:0;bottom:0;">
+	<div id="requestBody" class="d-flex align-items-center">
 			<div class="container d-flex justify-content-center">
-				<form method="post" action="form.php" style="height: auto; width: 20em; background-color:grey; padding: 2em;border-radius: 25px;">
+				<form method="post" action="form.php" id="requestForm">
 					<div class="d-flex flex-row justify-content-end">
 						<span id="close"><i class="fas fa-times fa-2x"></i></span>
 					</div>
@@ -32,7 +32,9 @@
 					<div class="d-none">
 						<input type="number" name="paintId" <?php echo "value=\"$paintId\""?>>
 					</div>
-					<button type="submit" class="btn btn-primary" id="">Anfrage absenden</button>
+					<div class="text-center">
+						<button type="submit" class="btn btn-primary" id="">Anfrage absenden</button>
+					</div>
 				</form>
 			</div>
 	</div>
