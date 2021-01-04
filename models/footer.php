@@ -4,18 +4,18 @@
 	<p>Diese Website wird von der Familie Hoffmann verwaltet.</p>
 	<h6>Ansprechpartner:</h6>
 		<div class="row mt-4">
-			<div class="col-md">
-				<p>Besitzer</p>
+			<div class="col-sm ml-4 ml-sm-0">
+				<p><i>Besitzer</i></p>
 				<p>Barbara Hoffmann</p>
 				<p><i class="fas fa-envelope"></i> example@gmx.de</p>
 			</div>
-			<div class="col">
-				<p>Verwaltung</p>
+			<div class="col-sm ml-4 ml-sm-0">
+				<p><i>Verwaltung</i></p>
 				<p>Sebastian Hoffmann</p>
 				<p><i class="fas fa-envelope"></i> example@gmx.de</p>
 			</div>
-			<div class="col">
-				<p>Website</p>
+			<div class="col-sm ml-4 ml-sm-0">
+				<p><i>Website</i></p>
 				<p>Florian Hoffmann</p>
 				<p><i class="fas fa-envelope"></i> example@gmx.de</p>
 			</div>

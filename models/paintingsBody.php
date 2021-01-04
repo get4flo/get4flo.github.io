@@ -41,7 +41,7 @@
 <div class="container-fluid">
 
 		<div class="row">
-			<div class="col-8 pt-0 pb-5 px-4">
+			<div class="col-md-8 pt-0 pb-5 px-4">
                 <div style="margin: 1em 5em;">
                     <?php
                         echo "<img src=\"..\static\pictures\detail\\$fullImg\" class=\"img-fluid\" alt=\"Responsive image\">"
@@ -51,12 +51,12 @@
 				<hr style="width:80%;background-color: #F2F2F2;text-align:center; margin-top: 50px; margin-bottom: 50px;">
 				
 				<div class="row">
-					<div class="col text-center">
+					<div class="col-sm text-center">
                         <?php
                             echo "<img src=\"..\static\pictures\detail\\$enviImg\" class=\"img-fluid\" alt=\"Responsive image\" style=\"height: 25em;\">"
                         ?>
 					</div>
-					<div class="col d-flex align-items-center p-0">
+					<div class="col-sm d-flex align-items-center p-0">
 						<div style="width: 80%">
 							<div class="row my-3">
 								<div class="col-3 d-flex justify-content-center align-items-center">
@@ -104,31 +104,31 @@
 				</div>
 
 			</div>
-			<div class="col-4 p-0" style="background-color: #f8f8f8;">
+			<div class="col-md-4 p-0" style="background-color: #f8f8f8;">
 				<div class="d-flex justify-content-center">
 					<div class="mt-5" style="width: 60%;">
 						<h3 class=""><?php echo "Bild Nr. $paintingNum" ?></h3>
 						<div class="row pt-3">
-							<div class="col">
+							<div class="col-sm">
 								<p>Entstehungsjahr:</p>
 							</div>
-							<div class="col">
+							<div class="col-sm">
 								<p><?php echo $year;?></p>
 							</div>
 						</div>
 						<div class="row">
-							<div class="col">
+							<div class="col-sm">
 								<p>Maße:</p>
 							</div>
-							<div class="col">
+							<div class="col-sm">
 								<p><?php echo $dimensions;?></p>
 							</div>
 						</div>
 						<div class="row pb-3">
-							<div class="col">
+							<div class="col-sm">
 								<p>Serie:</p>
 							</div>
-							<div class="col">
+							<div class="col-sm">
 								<p><?php echo $series;?></p>
 							</div>
 						</div>
