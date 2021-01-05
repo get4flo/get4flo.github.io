@@ -8,6 +8,7 @@
 	$color = $result['color'];
 	$technique = $result['technique'];
 	$paintId = $result['paintings_id'];
+	$imgStyle = $result['vertical'] ? "id=\"vertImg\"" : "id=\"fullImg\"";
 
 ?>
 <div id="request" style="display:none;">
@@ -44,7 +45,7 @@
 
 		<div class="row">
 			<div class="col-md-8 pt-0 pb-5 px-4">
-                <div style="margin: 1em 5em;">
+                <div <?php echo $imgStyle; ?>>
                     <?php
                         echo "<img src=\"..\static\pictures\detail\\$fullImg\" class=\"img-fluid\" alt=\"Responsive image\">"
                     ?>
@@ -58,7 +59,7 @@
                             echo "<img src=\"..\static\pictures\detail\\$enviImg\" class=\"img-fluid\" alt=\"Responsive image\" style=\"height: 25em;\">"
                         ?>
 					</div>
-					<div class="col-sm d-flex align-items-center p-0">
+					<div class="col-sm d-flex align-items-center p-0 mt-5 mt-sm-0">
 						<div style="width: 80%">
 							<div class="row my-3">
 								<div class="col-3 d-flex justify-content-center align-items-center">
