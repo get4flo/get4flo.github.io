@@ -1,0 +1,9 @@
+#logging
+#php_value error_reporting 4095
+#php_value display_errors stdout
+
+Require all denied
+
+ErrorDocument 403 /error/error.php
+ErrorDocument 404 /error/error.php
+

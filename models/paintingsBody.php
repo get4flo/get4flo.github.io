@@ -14,24 +14,27 @@
 <div id="request" style="display:none;">
 	<div id="requestBody" class="d-flex align-items-center">
 			<div class="container d-flex justify-content-center">
-				<form method="post" action="form.php" id="requestForm">
+				<form method="post" action="form.php" name="myForm" id="requestForm" onsubmit="return validateForm()">
 					<div class="d-flex flex-row justify-content-end">
 						<span id="close"><i class="fas fa-times fa-2x"></i></span>
 					</div>
 					<div class="form-group">
 						<label>Vorname</label>
-						<input type="text" class="form-control" name="firstname">
+						<input type="text" class="form-control" name="firstname" maxlength="45">
 					</div>
 					<div class="form-group">
 						<label>Nachname</label>
-						<input type="text" class="form-control" name="surname">
+						<input type="text" class="form-control" name="surname" maxlength="45">
 					</div>
 					<div class="form-group">
 						<label>Email</label>
-						<input type="Email" class="form-control" name="email">
+						<input type="email" class="form-control" name="email" maxlength="45">
 					</div>
 					<div class="d-none">
 						<input type="number" name="paintId" <?php echo "value=\"$paintId\""?>>
+					</div>
+					<div id="formError" class="text-center">
+						<label><span id="formCross"><i class="fas fa-times"></i></span><span> Bitte alle Felder ausfüllen</span></label>
 					</div>
 					<div class="text-center">
 						<button type="submit" class="btn btn-primary" id="">Anfrage absenden</button>
@@ -47,7 +50,7 @@
 			<div class="col-md-8 pt-0 pb-5 px-4">
                 <div <?php echo $imgStyle; ?>>
                     <?php
-                        echo "<img src=\"..\static\pictures\detail\\$fullImg\" class=\"img-fluid\" alt=\"Responsive image\">"
+                        echo "<img src=\"..\static\pictures\\fullview\\$fullImg\" class=\"img-fluid\" alt=\"Responsive image\">"
                     ?>
 				</div>
 				

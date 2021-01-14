@@ -7,17 +7,17 @@
 			<div class="col-sm ml-4 ml-sm-0">
 				<p><i>Besitzer</i></p>
 				<p>Barbara Hoffmann</p>
-				<p><i class="fas fa-envelope"></i> example@gmx.de</p>
+				<p><i class="fas fa-envelope"></i> barbara@arnulfhoffmann.de</p>
 			</div>
 			<div class="col-sm ml-4 ml-sm-0">
 				<p><i>Verwaltung</i></p>
 				<p>Sebastian Hoffmann</p>
-				<p><i class="fas fa-envelope"></i> example@gmx.de</p>
+				<p><i class="fas fa-envelope"></i> verwaltung@arnulfhoffmann.de</p>
 			</div>
 			<div class="col-sm ml-4 ml-sm-0">
 				<p><i>Website</i></p>
 				<p>Florian Hoffmann</p>
-				<p><i class="fas fa-envelope"></i> example@gmx.de</p>
+				<p><i class="fas fa-envelope"></i> website@arnulfhoffmann.de</p>
 			</div>
 		</div>
 	</div>

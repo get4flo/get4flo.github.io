@@ -23,7 +23,6 @@
     border-radius: 25px;
 }
 
-
 #close:hover {
     color: white;
     cursor: pointer;
@@ -35,6 +34,14 @@
 
 #fullImg {
     margin: 1em 1em;
+}
+
+#formError {
+    display: none;
+}
+
+#formCross {
+    color: darkred;
 }
 
 @media (min-width: 768px) {
