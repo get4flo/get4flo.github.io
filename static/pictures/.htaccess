@@ -1,0 +1,14 @@
+<IfModule mod_gzip.c>
+mod_gzip_on Yes
+mod_gzip_item_include file .JPG$
+</IfModule>
+
+<FilesMatch "\.(php|html|html5|jpg|JPG|png|js|css)$">
+Header set Cache-Control "max-age=604800"
+Header set last-modified "Tus May 15 13:00:00 EDT 2020"
+</FilesMatch>
+
+<Files .htaccess>
+Order Allow,Deny
+Deny from all
+</Files>
