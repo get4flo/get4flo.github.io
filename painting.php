@@ -47,7 +47,7 @@ if($error == 0) {
 <html>
 
 <head>
-	<title>AH-ArtGallery</title>
+	<title>Arnulf Hoffmann Kunstgallerie</title>
 	<link rel="stylesheet" href="static\css\library\bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="static\css\painting.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">

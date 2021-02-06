@@ -17,7 +17,7 @@
 <html>
 
 <head>
-    <title>AH-ArtGallery</title>
+    <title>Arnulf Hoffmann Kunstgallerie</title>
     <link rel="stylesheet" href="static\css\library\bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="static\css\style.css">
     <meta name="google-site-verification" content="BIhkjGFajk4WesSCjbaFJZjG3kQzFLyNc0b2DvzCMes" />

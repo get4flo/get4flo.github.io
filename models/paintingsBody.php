@@ -144,9 +144,16 @@
 						</div>
 						<?php 
 							if(array_key_exists('r', $_GET)){
-								echo '<div class="text-center mt-4">
-									<p class="m-0"><span style="color: green;"><i class="fas fa-check"></i></span> Anfrage erfolgreich</p>
-								</div>';
+								if(strcmp($_GET['r'], 'true') === 0){
+									echo '<div class="text-center mt-4">
+										<p class="m-0"><span style="color: green;"><i class="fas fa-check"></i></span> Anfrage erfolgreich</p>
+									</div>';
+								} else {
+									$error = $_GET['r'];
+									echo "<div class=\"text-center mt-4\">
+										<p class=\"m-0\"><span style=\"color: red;\"><i class=\"fas fa-times\"></i></span>$error</p>
+									</div>";
+								}
 							}
 						
 						?>
