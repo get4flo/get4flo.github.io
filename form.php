@@ -25,13 +25,29 @@
         global $error;
         $error = "Bitte gültige Email-Adresse angeben";
     }
-
+    
+    
     if(strlen($error) === 0) 
     {
         $interestSql = "insert into db59690.prospect values (0,\"$email\",\"$vorname\",\"$nachname\",$product_id)";
         #$numInterest = "select count(*) from prospect where email=$email";
-        $insert = $con->query($interestSql);
+        #$insert = $con->query($interestSql);
+        $insert = true;
         
+        //mail
+        include 'models/emailTemplate.php';
+        $subject = 'Anfrage für Malerei';
+        sendMail($email, $vorname, $nachname, $clientEmail, $altClient, $subject);
+        
+        //$insert is true if mysql Query successful or false otherwise
+        header("Location: https://www.arnulfhoffmann.de/painting.php?p=$product_id&r=$insert", true,  301);
+    } else {
+        
+        header("Location: https://www.arnulfhoffmann.de/painting.php?p=$product_id&r=$error", true,  301);
+    }
+    
+    
+    function sendMail($recipient, $vorname, $nachname, $body, $altBody, $subject) {
 
         $mail = new PHPMailer();
     
@@ -49,24 +65,20 @@
     
             //Recipients
             $mail->setFrom('verwaltung@arnulfhoffmann.de', 'AH-Gallery Verwaltung');  //verwaltung@arnulfhoffmann.de AH-Gallery Verwaltung
-            $mail->addAddress("rhf77604@cuoly.com", "florian hoffmann");     // Add a recipient "$email", "$vorname $nachname"
+            $mail->addAddress("$recipient", "$vorname $nachname");     // Add a recipient "$email", "$vorname $nachname"
     
             // Content
             $mail->isHTML(true);                                  // Set email format to HTML
-            $mail->Subject = 'Anfrage für Malerei';
-            $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-            $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+            $mail->Subject = $subject;
+            $mail->Body    = $body;
+            $mail->AltBody = $altBody;
             
             $mail->send();
-            echo 'Message has been sent';
+            //echo 'Message has been sent';
         } catch (Exception $e) {
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
 
-        //$insert is true if mysql Query successful or false otherwise
-        header("Location: https://www.arnulfhoffmann.de/painting.php?p=$product_id&r=$insert", true,  301);
     }
-
-    header("Location: https://www.arnulfhoffmann.de/painting.php?p=$product_id&r=$error", true,  301);
     
 ?>
