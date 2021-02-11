@@ -17,35 +17,42 @@
     if(strlen($vorname) === 0 || strlen($nachname) === 0)
     {
         global $error;
-        $error = "Vorname und Nachname dürfen nicht leer sein.";
+        $error = "Vorname_und_Nachname_dürfen_nicht_leer_sein.";
     }
 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) 
     {
         global $error;
-        $error = "Bitte gültige Email-Adresse angeben";
+        $error = "Bitte_gültige_Email-Adresse_angeben";
     }
-    
     
     if(strlen($error) === 0) 
     {
+        global $error;
         $interestSql = "insert into db59690.prospect values (0,\"$email\",\"$vorname\",\"$nachname\",$product_id)";
         #$numInterest = "select count(*) from prospect where email=$email";
-        #$insert = $con->query($interestSql);
+        $insert = $con->query($interestSql);
         $insert = true;
         
         //mail
         include 'models/emailTemplate.php';
         $subject = 'Anfrage für Malerei';
-        sendMail($email, $vorname, $nachname, $clientEmail, $altClient, $subject);
+        if(!sendMail($email, $vorname, $nachname, getHtmlMail(true, $template), $altClient, $subject))
+        {
+            $error = "Fehler beim senden der Email";
+        }
+        sendMail("verwaltung@arnulfhoffmann.de", "Familie", "Hoffmann", getHtmlMail(false, $template), $altVerwaltung, $subject);
         
-        //$insert is true if mysql Query successful or false otherwise
-        header("Location: https://www.arnulfhoffmann.de/painting.php?p=$product_id&r=$insert", true,  301);
     } else {
         
         header("Location: https://www.arnulfhoffmann.de/painting.php?p=$product_id&r=$error", true,  301);
     }
     
+    if(strlen($error) === 0) 
+    {
+        //$insert is true if mysql Query successful or false otherwise
+        header("Location: https://www.arnulfhoffmann.de/painting.php?p=$product_id&r=$insert", true,  301);
+    }
     
     function sendMail($recipient, $vorname, $nachname, $body, $altBody, $subject) {
 
@@ -53,7 +60,7 @@
     
         try {
             //Server settings
-            $mail->SMTPDebug = SMTP::DEBUG_LOWLEVEL;                      // Enable verbose debug output
+            //$mail->SMTPDebug = SMTP::DEBUG_LOWLEVEL;                      // Enable verbose debug output
             $mail->isSMTP();                                            // Send using SMTP
             $mail->Host       = 'mail.manitu.de';                  // Set the SMTP server to send through
             $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
@@ -70,13 +77,16 @@
             // Content
             $mail->isHTML(true);                                  // Set email format to HTML
             $mail->Subject = $subject;
-            $mail->Body    = $body;
+            $mail->Body= $body;
             $mail->AltBody = $altBody;
             
             $mail->send();
+            return true;
+
             //echo 'Message has been sent';
         } catch (Exception $e) {
-            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+            //echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+            return false;
         }
 
     }
