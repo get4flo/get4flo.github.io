@@ -17,13 +17,13 @@
     if(strlen($vorname) === 0 || strlen($nachname) === 0)
     {
         global $error;
-        $error = "Vorname_und_Nachname_dürfen_nicht_leer_sein.";
+        $error = "Error:_Vorname_und/oder_Nachname_dürfen_nicht_leer_sein.";
     }
 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) 
     {
         global $error;
-        $error = "Bitte_gültige_Email-Adresse_angeben";
+        $error = "Error:_Bitte_gültige_Email-Adresse_angeben";
     }
     
     if(strlen($error) === 0) 
@@ -39,19 +39,19 @@
         $subject = 'Anfrage für Malerei';
         if(!sendMail($email, $vorname, $nachname, getHtmlMail(true, $template), $altClient, $subject))
         {
-            $error = "Fehler beim senden der Email";
+            $error = "Error:_Fehler_beim_senden_der_Email";
         }
         sendMail("verwaltung@arnulfhoffmann.de", "Familie", "Hoffmann", getHtmlMail(false, $template), $altVerwaltung, $subject);
-        
-    } else {
-        
-        header("Location: https://www.arnulfhoffmann.de/painting.php?p=$product_id&r=$error", true,  301);
     }
+
     
     if(strlen($error) === 0) 
     {
         //$insert is true if mysql Query successful or false otherwise
         header("Location: https://www.arnulfhoffmann.de/painting.php?p=$product_id&r=$insert", true,  301);
+    } else  {
+        // for localhost "https://www.arnulfhoffmann.de/" = ""
+        header("Location: https://www.arnulfhoffmann.de/error/error.php?e=$error", true,  301);
     }
     
     function sendMail($recipient, $vorname, $nachname, $body, $altBody, $subject) {
@@ -83,7 +83,6 @@
             $mail->send();
             return true;
 
-            //echo 'Message has been sent';
         } catch (Exception $e) {
             //echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
             return false;

@@ -12,6 +12,10 @@
             $Message = 'Error: 404, Seite nicht gefunden';
         }
     }
+    if(isset($_GET['e'])){
+        global $Message;
+        $Message = str_replace("_", " ", $_GET['e']);
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -31,6 +35,8 @@
     
         </div>
     
+    </div>
+    <div style="padding: 10em 0em;">
     </div>
 
     <?php
