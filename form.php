@@ -8,6 +8,7 @@
 
     include 'models/db.php';
 
+    $formOfAdress = $_POST['formOfAddress'];
     $vorname = $_POST['firstname'];
     $nachname = $_POST['surname'];
     $email = $_POST['email'];

@@ -3,12 +3,12 @@
     $altClient = "Sehr geehrter Herr $nachname \n\n vielen dank für ihr Interesse an einer Arnulf Hoffmann Malerei. Wir melden uns in kürze bei ihnen. \n\n Ihre Familie Hoffmann";
     
     $clientEmail = "
-    <b>Sehr geehrter Herr $nachname</b>
+    <b>Sehr geehrte/r $formOfAdress $nachname</b>
 
     <br>
     <br>
 
-    vielen dank für ihr Interesse. Wir melden uns so bald wie möglich bei Ihnen damit Sie schon 
+    vielen dank für Ihr Interesse. Wir melden uns so bald wie möglich bei Ihnen damit Sie schon 
     bald ihre Malerei von Arnulf Hoffmann genießen können.
 
     <br>
