@@ -7,6 +7,10 @@ Order Allow,Deny
 Deny from all
 </Files>
 
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
 ErrorDocument 403 /error/error.php
 ErrorDocument 404 /error/error.php
 
