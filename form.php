@@ -26,6 +26,14 @@
         global $error;
         $error = "Error:_Bitte_gültige_Email-Adresse_angeben";
     }
+
+    $mailContainer = getMailInfo($product_id, $con);
+
+    if(empty($mailContainer)){
+        $mailContainer['picture'] = 'https://www.arnulfhoffmann.de/static/pictures/fullview/1.JPG';
+        $mailContainer['summary'] = 'Bild Nr. 1 / 1997 / 120 x 100';
+        $mailContainer['size'] = 'width: 329px;height: 260px;';
+    }
     
     if(strlen($error) === 0) 
     {
@@ -89,6 +97,26 @@
             return false;
         }
 
+    }
+
+    function getMailInfo($id, $con){
+
+        if(!is_numeric($id)){
+            return array();
+        }
+
+        $sql = "select * from paintings where paintings_id = $id";
+        $resultobj =  $con->query($sql);
+        $result = $resultobj->fetch_assoc();
+
+        $picture = 'https://www.arnulfhoffmann.de/static/pictures/fullview/' . $result['picture_full'];
+        $summary = 'Bild Nr.' . $result['paintingNumber'] . ' / ' . $result['year'] . ' / ' . $result['dimensions'];
+        $size = $result['vertical'] ? 'width: 260px;height: 329px;' : 'width: 329px;height: 260px;';
+
+        if(empty($picture)){
+            return array();
+        }
+        return ['picture' => $picture, 'summary' => $summary, 'size' => $size];
     }
     
 ?>

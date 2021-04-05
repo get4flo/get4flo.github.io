@@ -2,38 +2,66 @@
 
     $altClient = "Sehr geehrter Herr $nachname \n\n vielen dank für ihr Interesse an einer Arnulf Hoffmann Malerei. Wir melden uns in kürze bei ihnen. \n\n Ihre Familie Hoffmann";
     
+    $picture = $mailContainer['picture'];
+    $size = $mailContainer['size'];
+    $summary = $mailContainer['summary'];
     $clientEmail = "
-    <b>Sehr geehrte/r $formOfAdress $nachname</b>
+    <span><b>Sehr geehrte/r $formOfAdress $nachname</b></span>
 
     <br>
     <br>
 
-    vielen dank für Ihr Interesse. Wir melden uns so bald wie möglich bei Ihnen damit Sie schon 
-    bald ihre Malerei von Arnulf Hoffmann genießen können.
+    <span>vielen dank für Ihr Interesse. Wir melden uns so bald wie möglich bei Ihnen mit weiteren Informationen
+    zu der Malerei/Skulptur, die Ihr Interesse geweckt hat.</span>
 
+    <br>
+    <br>
+
+    <span>Ihre Familie Hoffmann</span>
+
+    <br>
+    <br>
+    <hr>
     <br>
     
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique necessitatibus 
-    tempora asperiores eaque sequi delectus vel animi sit. Illum, reiciendis ratione. 
-    Corporis voluptas a minus, autem cupiditate tempore ullam quae!
+    <table align=\"center\">
+        <tbody>
+            <tr>
+                <td style=\"text-align: center\">
+                    <p><b>Malerei von Interesse:</b></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src=\"$picture\" style=\"$size\" alt=\"Malerei\">
+                </td>
+            </tr>
+            <tr>
+                <td style=\"text-align: center\">
+                    <span style=\"color:grey; font-size: 15px;\">$summary</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
     <br>
-    <br>
-
-    Ihre Familie Hoffmann
     ";
 
     $verwaltungEmail = "
-    <b>Neue Anfrage von $vorname $nachname</b>
+    <span><b>Neue Anfrage von $vorname $nachname</b></span>
 
     <br>
     <br>
 
-    Bitte so bald wie möglich zurück schreiben.
+    <span>Bitte so bald wie möglich zurück schreiben.</span>
 
     <br>
 
-    Euer Flo
+    <span>Email: $email</span>
+
+    <br>
+
+    <span>Euer Flo</span>
     
     ";
 
@@ -46,7 +74,7 @@
             <tbody>
                 <tr>
                     <td>
-                        <table align=\"center\" style=\"width:100%;max-width:600px;margin:0 auto\">
+                        <table align=\"center\" style=\"width:100%;max-width:600px;margin:0 auto;background-color:#ffffff\">
                             <tbody>
                                 <tr>
                                     <td align=\"left\" style=\"padding-top: 30px; padding-bottom: 30px;\">
@@ -65,7 +93,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <table align=\"center\" style=\"width:100%;max-width:600px;margin:0 auto\">
+                        <table align=\"center\" style=\"width:100%;max-width:600px;margin:0 auto;background-color:#ffffff\">
                         <tbody>
                                 <tr>
                                     <td align=\"center\">
