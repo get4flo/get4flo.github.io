@@ -20,7 +20,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>AH-ArtGallery</title>
+	<title>Arnulf Hoffmann Kunstgallerie</title>
 	<link rel="stylesheet" href="..\static\css\library\bootstrap.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="..\static\pictures\logo\logo3-1.png">

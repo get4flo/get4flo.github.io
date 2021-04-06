@@ -15,18 +15,22 @@
 	<div id="requestBody" class="d-flex align-items-center">
 			<div class="container d-flex justify-content-center">
 				<form method="post" action="form.php" name="myForm" id="requestForm" onsubmit="return validateForm()">
-					<div class="d-flex flex-row justify-content-end">
-						<span id="close"><i class="fas fa-times fa-2x"></i></span>
-					</div>
-					<label>Anrede</label>
-					<div style="padding-bottom: 10px;">
-						<div class="form-check form-check-inline">
-							<input class="form-check-input" type="radio" name="formOfAddress" id="inlineRadio1" value="herr" checked>
-  							<label class="form-check-label" for="inlineRadio1">Herr</label>
+					<div class="d-flex flex-row">
+						<div class="mr-auto">
+							<label>Anrede</label>
+							<div style="padding-bottom: 10px;">
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="formOfAddress" id="inlineRadio1" value="herr" checked>
+  									<label class="form-check-label" for="inlineRadio1">Herr</label>
+								</div>
+								<div class="form-check form-check-inline" style="padding-left: 20px;">
+									<input class="form-check-input" type="radio" name="formOfAddress" id="inlineRadio1" value="frau">
+  									<label class="form-check-label" for="inlineRadio1">Frau</label>
+								</div>
+							</div>
 						</div>
-						<div class="form-check form-check-inline" style="padding-left: 20px;">
-							<input class="form-check-input" type="radio" name="formOfAddress" id="inlineRadio1" value="frau">
-  							<label class="form-check-label" for="inlineRadio1">Frau</label>
+						<div>
+							<span id="close"><i class="fas fa-times fa-2x"></i></span>
 						</div>
 					</div>
 					<div class="form-group">
