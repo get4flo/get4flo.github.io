@@ -1,9 +1,23 @@
 <?php
 
+$inDevelopment = false;
+
 $servername = "mysql07.manitu.net";
 $username = "u59690";
 $password = "eTYn9D3Cf9awntXe";
 $db = "db59690";
+
+$devServername = "localhost";
+$devUsername = "root";
+$devPassword = "";
+$devDb = "arnulfhoffmann";
+
+if($inDevelopment){
+	$servername = $devServername;
+	$username = $devUsername;
+	$password = $devPassword;
+	$db = $devDb;
+}
 
 // Create connection
 $con = new mysqli($servername, $username, $password,$db);

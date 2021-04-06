@@ -31,14 +31,15 @@
 
     if(empty($mailContainer)){
         $mailContainer['picture'] = 'https://www.arnulfhoffmann.de/static/pictures/fullview/1.JPG';
-        $mailContainer['summary'] = 'Bild Nr. 1 / 1997 / 120 x 100';
+        $mailContainer['summary'] = 'Bild Nr. 1 / 1997 / 120 x 100 (Default)';
         $mailContainer['size'] = 'width: 329px;height: 260px;';
     }
     
     if(strlen($error) === 0) 
     {
         global $error;
-        $interestSql = "insert into db59690.prospect values (0,\"$email\",\"$vorname\",\"$nachname\",$product_id)";
+        $timestamp = date('d/m/Y H:i:s', time());
+        $interestSql = "insert into $db.prospect values (0,\"$email\",\"$vorname\",\"$nachname\",$product_id, \"$timestamp\")";
         #$numInterest = "select count(*) from prospect where email=$email";
         $insert = $con->query($interestSql);
         $insert = true;
