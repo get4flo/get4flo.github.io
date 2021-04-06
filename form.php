@@ -39,10 +39,11 @@
     {
         global $error;
         $timestamp = date('d/m/Y H:i:s', time());
-        $interestSql = "insert into $db.prospect values (0,\"$email\",\"$vorname\",\"$nachname\",$product_id, \"$timestamp\")";
+        $gender = $formOfAdress === 'herr' ? 'm' : 'f';
+        $interestSql = "insert into $db.prospect values (0,\"$email\",\"$vorname\",\"$nachname\",$product_id, \"$timestamp\", \"$gender\")";
         #$numInterest = "select count(*) from prospect where email=$email";
         $insert = $con->query($interestSql);
-        $insert = true;
+        $insertStatus = "true";
         
         //mail
         include 'models/emailTemplate.php';
@@ -58,7 +59,7 @@
     if(strlen($error) === 0) 
     {
         //$insert is true if mysql Query successful or false otherwise
-        header("Location: https://www.arnulfhoffmann.de/painting.php?p=$product_id&r=$insert", true,  301);
+        header("Location: https://www.arnulfhoffmann.de/painting.php?p=$product_id&r=$insertStatus", true,  301);
     } else  {
         // for localhost "https://www.arnulfhoffmann.de/" = ""
         header("Location: https://www.arnulfhoffmann.de/error/error.php?e=$error", true,  301);

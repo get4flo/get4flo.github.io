@@ -5,8 +5,9 @@
     $picture = $mailContainer['picture'];
     $size = $mailContainer['size'];
     $summary = $mailContainer['summary'];
+    $printFormOfAdress = $gender === 'm' ? 'Herr' : 'Frau';
     $clientEmail = "
-    <span><b>Sehr geehrte/r $formOfAdress $nachname</b></span>
+    <span><b>Sehr geehrte/r $printFormOfAdress $nachname</b></span>
 
     <br>
     <br>
