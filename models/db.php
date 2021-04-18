@@ -1,6 +1,6 @@
 <?php
 
-$inDevelopment = false;
+include 'models/config.php';
 
 $servername = "mysql07.manitu.net";
 $username = "u59690";
@@ -12,7 +12,7 @@ $devUsername = "root";
 $devPassword = "";
 $devDb = "arnulfhoffmann";
 
-if($inDevelopment){
+if($dbDevelopment){
 	$servername = $devServername;
 	$username = $devUsername;
 	$password = $devPassword;

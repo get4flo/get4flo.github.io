@@ -1,5 +1,8 @@
+<?php
+	include 'models/config.php';
+?>
 <nav class="navbar navbar-expand-lg navbar-light border-bottom">
-		<a class="navbar-brand py-0" href="http://www.arnulfhoffmann.de/">
+		<a class="navbar-brand py-0" href="<?= $basUrl ?>/">
 			<img src="..\static\pictures\logo\logo3-1.png">
 		</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,13 +12,13 @@
 		<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 				<li class="nav-item active px-lg-2 ml-lg-3">
-					<a class="nav-link" href="http://www.arnulfhoffmann.de/#gallery">Gallerie<span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="<?= $basUrl ?>/#gallery">Gallerie<span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item px-lg-2">
-					<a class="nav-link" href="http://www.arnulfhoffmann.de/#kuenstler">Künstler</a>
+					<a class="nav-link" href="<?= $basUrl ?>/#kuenstler">Künstler</a>
 				</li>
 				<li class="nav-item px-lg-2">
-					<a class="nav-link" href="http://www.arnulfhoffmann.de/#impressum">Impressum</a>
+					<a class="nav-link" href="<?= $basUrl ?>/#impressum">Impressum</a>
 				</li>
 			</ul>
 			<div class="d-none d-lg-block">

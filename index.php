@@ -65,11 +65,11 @@
         </div>
     </div>
 
-    <div class="container-lg py-4 gallery">
+    <div class="container py-4 gallery">
         <div class="py-4 pl-3">
             <div class="row justify-content-center">
                 <div class="col-xs-10 col-lg-8">
-                    <h3 class="py-4">Kunstgallerie von Arnulf Hoffmann</h3>
+                    <h3 class="py-4 text-center">Kunstgallerie von Arnulf Hoffmann</h3>
                     <p class="py-4">
                         Arnulf Hoffmann war ein großartiger Künstler, 
                         Lehrer und Großvater. In seiner Zeit als Künstler stellte er u.a. in Paris, London,
@@ -119,7 +119,7 @@
                                                 <h5 class=\"m-0\">#$num</h5>
                                             </div>
                                             <div class=\"col\">
-                                                <span style=\"display: flex;flex-direction: row-reverse;\"><a href=\"http://www.arnulfhoffmann.de/painting.php?p=$id\" class=\"btn btn-dark btn-sm pr-2 req\">mehr</a></span>
+                                                <span style=\"display: flex;flex-direction: row-reverse;\"><a href=\"${basUrl}/painting.php?p=$id\" class=\"btn btn-dark btn-sm pr-2 req\">mehr</a></span>
                                             </div>
                                         </div>
                                     </div>
@@ -128,14 +128,14 @@
                     }
                     echo '</div>';
                 }
-                echo '
-                <div class="row py-lg-4">
-				    <div class="col"> 
-					    <div style="text-align: center"><a class="btn btn-success" href="http://www.arnulfhoffmann.de/seriesView.php?s=1">mehr Bilder</a></div>
+                echo "
+                <div class=\"row py-lg-4\">
+				    <div class=\"col\"> 
+					    <div style=\"text-align: center\"><a class=\"btn btn-success\" href=\"${basUrl}/seriesView.php?s=1\">mehr Bilder</a></div>
 				    </div>
                 </div>
                 
-                <div style="padding-top: 50px; padding-bottom: 50px"></div>'; 
+                <div style=\"padding-top: 50px; padding-bottom: 50px\"></div>"; 
             }
         ?>
 
