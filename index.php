@@ -132,7 +132,7 @@
                 echo "
                 <div class=\"row py-lg-4\">
 				    <div class=\"col\"> 
-					    <div style=\"text-align: center\"><a class=\"btn btn-success\" href=\"${basUrl}/seriesView.php?s=$currentSeriesId\">mehr Bilder</a></div>
+					    <div style=\"text-align: center\"><a class=\"btn btn-success\" href=\"${basUrl}/seriesView.php?s=$currentSeriesId&p=1\">mehr Bilder</a></div>
 				    </div>
                 </div>
                 
