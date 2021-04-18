@@ -1,6 +1,6 @@
 /static/js/library
 /static/css/library
-/static/pictures/detail/
+/static/pictures
 /models/Exception.php
 /models/PHPMailer.php
 /models/SMTP.php

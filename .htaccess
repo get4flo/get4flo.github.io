@@ -1,6 +1,6 @@
 #logging
-php_value error_reporting 4095
-php_value display_errors stdout
+#php_value error_reporting 4095
+#php_value display_errors stdout
 
 <Files .htaccess>
 Order Allow,Deny

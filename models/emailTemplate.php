@@ -49,7 +49,7 @@
     ";
 
     $verwaltungEmail = "
-    <span><b>Neue Anfrage von $vorname $nachname</b></span>
+    <span><b>Neue Anfrage von $printFormOfAdress $vorname $nachname</b></span>
 
     <br>
     <br>
@@ -63,6 +63,33 @@
     <br>
 
     <span>Euer Flo</span>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    
+    <table align=\"center\">
+        <tbody>
+            <tr>
+                <td style=\"text-align: center\">
+                    <p><b>Malerei von Interesse:</b></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src=\"$picture\" style=\"$size\" alt=\"Malerei\">
+                </td>
+            </tr>
+            <tr>
+                <td style=\"text-align: center\">
+                    <span style=\"color:grey; font-size: 15px;\">$summary</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
     
     ";
 
