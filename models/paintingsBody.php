@@ -1,7 +1,5 @@
 <?php
     $paintingNum = $result['paintingNumber'];
-    $fullImg = $result['picture_full'];
-	$enviImg = $result['picture_envi'];
 	$year = $result['year'];
 	$dimensions = $result['dimensions'];
 	$series = $result['series'];
@@ -65,7 +63,7 @@
 			<div class="col-md-8 pt-0 pb-5 px-4">
                 <div <?php echo $imgStyle; ?>>
                     <?php
-                        echo "<img src=\"..\static\pictures\\fullview\\$fullImg\" class=\"img-fluid\" alt=\"Responsive image\">"
+                        echo "<img src=\"../static/pictures/fullview/$paintId.JPG\" class=\"img-fluid\" alt=\"Responsive image\">"
                     ?>
 				</div>
 				
@@ -74,7 +72,7 @@
 				<div class="row">
 					<div class="col-sm text-center">
                         <?php
-                            echo "<img src=\"..\static\pictures\detail\\$enviImg\" class=\"img-fluid\" alt=\"Responsive image\" style=\"height: 25em;\">"
+                            echo "<img src=\"../static/pictures/detail/${paintId}envie.jpg\" class=\"img-fluid\" alt=\"Responsive image\" style=\"height: 25em;\">"
                         ?>
 					</div>
 					<div class="col-sm d-flex align-items-center p-0 mt-5 mt-sm-0">

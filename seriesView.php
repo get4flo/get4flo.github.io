@@ -68,7 +68,6 @@ $rows = ceil($resultSize / 3);
                         if($resultSize>0){
                             $resultSize--;
                             $result = $resultobj->fetch_assoc();
-                            $img = $result['picture_full'];
                             $number = $result['paintingNumber'];
                             $vertikal = $result['vertical'] ? "id=\"vertImg\"" : "";
                             $id = $result['paintings_id'];
@@ -76,7 +75,7 @@ $rows = ceil($resultSize / 3);
                             <div class='col-lg-4 py-2 py-lg-0'>
                                 <div class='card'>
                                     <div id=\"cardImage\">
-                                        <img $vertikal class='card-img-top shadowh' src='static\pictures\\fullview\\$img' alt='Picture'>
+                                        <img $vertikal class='card-img-top shadowh' src='static/pictures/preview/pre${id}.jpg' alt='Picture'>
                                     </div>
                                     <div class='card-body'>
                                         <div class='row align-items-center'>
@@ -84,7 +83,7 @@ $rows = ceil($resultSize / 3);
                                                 <h5 class=' m-0'>#$number</h5>
                                             </div>
                                             <div class='col'>
-                                                <span style='display: flex;flex-direction: row-reverse;'><a href='http://www.arnulfhoffmann.de/painting.php?p=$id' class='btn btn-dark btn-sm pr-2 req'>mehr</a></span>
+                                                <span style='display: flex;flex-direction: row-reverse;'><a href='${basUrl}/painting.php?p=$id' class='btn btn-dark btn-sm pr-2 req'>mehr</a></span>
                                             </div>
                                         </div>
                                     </div>

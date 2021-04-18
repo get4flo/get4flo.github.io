@@ -44,7 +44,32 @@
     color: darkred;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1400px){
+
+    #fullImg {
+        margin: 1em 10em;
+    }
+
+    #vertImg {
+        margin: 1em 18em;
+    }
+
+}
+
+@media (min-width: 1200px) and (max-width: 1399px){
+
+    #fullImg {
+        margin: 1em 7em;
+    }
+
+    #vertImg {
+        margin: 1em 14em;
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+
     #fullImg {
         margin: 1em 7em;
     }
@@ -53,4 +78,23 @@
         margin: 1em 10em;
     }
 
-};
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+
+    #vertImg {
+        margin: 1em 6em;
+    }
+
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    #fullImg {
+        margin: 1em 7em;
+    }
+
+    #vertImg {
+        margin: 1em 10em;
+    }
+
+}

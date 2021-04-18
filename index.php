@@ -1,9 +1,9 @@
 <?php
     include 'models/db.php';
 
-    $bSql = 'select * from paintings where series_id = 1 limit 9';
-    $nSql = 'select * from paintings where series_id = 1 limit 9';
-    $kSql = 'select * from paintings where series_id = 1 limit 9';
+    $bSql = 'select * from paintings where series_id = 1 limit 6';
+    $nSql = 'select * from paintings where series_id = 2 limit 6';
+    $kSql = 'select * from paintings where series_id = 3 limit 6';
 
     $bRes = $con->query($bSql);
     $nRes = $con->query($nSql);
@@ -97,12 +97,13 @@
 				    </div>
 			    </div>";
 
-                for($j=0; $j<3; $j++){
+                for($j=0; $j<2; $j++){
                     echo '<div class="row py-lg-4">';
                     for($k=0; $k<3; $k++){
                         global $currentK;
                         global $currentSeriesId;
                         $currentK = $crurrentI->fetch_assoc();
+                        if($currentK == null) break;
                         $currentSeriesId = $currentK['series_id'];
                         $id = $currentK['paintings_id'];
                         $img = $currentK['picture_full'];
@@ -110,9 +111,9 @@
                         $vertikal = $currentK['vertical'] ? "id=\"vertImg\"" : "";
 
                         echo "
-                            <div class=\"col-lg py-2 py-lg-0\">
+                            <div class=\"col-4 py-2 py-lg-0\">
                                 <div class=\"card\">
-                                    <div id=\"cardImage\"><img $vertikal class=\"card-img-top shadowh\" src=\"static\pictures\\fullview\\$img\"></div>
+                                    <div id=\"cardImage\"><img $vertikal class=\"card-img-top shadowh\" src=\"static/pictures/preview/pre${id}.jpg\"></div>
                                     <div class=\"card-body\">
                                         <div class=\"row align-items-center\">
                                             <div class=\"col\">
@@ -131,7 +132,7 @@
                 echo "
                 <div class=\"row py-lg-4\">
 				    <div class=\"col\"> 
-					    <div style=\"text-align: center\"><a class=\"btn btn-success\" href=\"${basUrl}/seriesView.php?s=1\">mehr Bilder</a></div>
+					    <div style=\"text-align: center\"><a class=\"btn btn-success\" href=\"${basUrl}/seriesView.php?s=$currentSeriesId\">mehr Bilder</a></div>
 				    </div>
                 </div>
                 
