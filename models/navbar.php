@@ -12,7 +12,7 @@
 		<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 				<li class="nav-item active px-lg-2 ml-lg-3">
-					<a class="nav-link" href="<?= $basUrl ?>/#gallery">Gallerie<span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="<?= $basUrl ?>/#gallery">Galerie<span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item px-lg-2">
 					<a class="nav-link" href="<?= $basUrl ?>/#kuenstler">Künstler</a>

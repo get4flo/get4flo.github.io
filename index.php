@@ -17,7 +17,7 @@
 <html>
 
 <head>
-    <title>Arnulf Hoffmann Kunstgallerie</title>
+    <title>Arnulf Hoffmann Kunstgalerie</title>
     <link rel="stylesheet" href="static\css\library\bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="static\css\style.css">
     <meta name="google-site-verification" content="BIhkjGFajk4WesSCjbaFJZjG3kQzFLyNc0b2DvzCMes" />
@@ -69,7 +69,7 @@
         <div class="py-4 pl-3">
             <div class="row justify-content-center">
                 <div class="col-xs-10 col-lg-8">
-                    <h3 class="py-4 text-center">Kunstgallerie von Arnulf Hoffmann</h3>
+                    <h3 class="py-4 text-center">Kunstgalerie von Arnulf Hoffmann</h3>
                     <p class="py-4">
                         Arnulf Hoffmann war ein großartiger Künstler, 
                         Lehrer und Großvater. In seiner Zeit als Künstler stellte er u.a. in Paris, London,

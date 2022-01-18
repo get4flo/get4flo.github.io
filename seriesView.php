@@ -73,7 +73,7 @@ if ($error == 0) {
 <html>
 
 <head>
-    <title>Arnulf Hoffmann Kunstgallerie</title>
+    <title>Arnulf Hoffmann Kunstgalerie</title>
     <link rel="stylesheet" href="static\css\library\bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="static\css\style.css">
     <meta charset="utf-8">
