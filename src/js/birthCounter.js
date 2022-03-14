@@ -1,5 +1,13 @@
 var myBirthday = new Date('2000-03-12T03:00:00').getTime();
-		
+
+function enDisableLifeExpectancy(){
+	var element = document.getElementById("lifeExpectancyRow");
+	if(element.classList.contains('d-none')){
+		element.classList.remove('d-none');
+	} else{
+		element.classList.add('d-none');
+	}
+}
 		
 var x = setInterval( function() {
 			
@@ -14,9 +22,9 @@ var x = setInterval( function() {
 	var totalDays = Math.floor(alter / ( 1000 * 60 * 60 * 24));
 	var lebenserwartung = totalDays / (81 * 365 + 20) * 100;
 			
-	document.getElementById("yearCounter").innerHTML = years.toFixed(10) + " Jahre" + " (" + lebenserwartung.toFixed(2) + "%)";
-	document.getElementById("secCounter").innerHTML = seconds + " Sekunden";
+	document.getElementById("yearCounter").innerHTML = years.toFixed(10).replace(/\./g, ',') + " Jahre" + " (" + lebenserwartung.toFixed(2) + "%)";
+	document.getElementById("secCounter").innerHTML = seconds.toLocaleString('de-DE') + " Sekunden";
 	document.getElementById("dayCounter").innerHTML = days + " Tage";
-	document.getElementById("totalDayCounter").innerHTML = totalDays + " Tage";
+	document.getElementById("totalDayCounter").innerHTML = totalDays.toLocaleString('de-DE') + " Tage";
 }, 1000);
 		
