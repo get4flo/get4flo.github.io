@@ -22,7 +22,8 @@ var x = setInterval( function() {
 	var totalDays = Math.floor(alter / ( 1000 * 60 * 60 * 24));
 	var lebenserwartung = totalDays / (81 * 365 + 20) * 100;
 			
-	document.getElementById("yearCounter").innerHTML = years.toFixed(10).replace(/\./g, ',') + " Jahre" + " (" + lebenserwartung.toFixed(2) + "%)";
+	document.getElementById("yearCounter").innerHTML = years.toFixed(10).replace(/\./g, ',') + " Jahre";
+	document.getElementById("lifeExpectancy").innerHTML = lebenserwartung.toFixed(2).replace(/\./g, ',') + "% (Ø ~ 81 Jahre)";
 	document.getElementById("secCounter").innerHTML = seconds.toLocaleString('de-DE') + " Sekunden";
 	document.getElementById("dayCounter").innerHTML = days + " Tage";
 	document.getElementById("totalDayCounter").innerHTML = totalDays.toLocaleString('de-DE') + " Tage";
