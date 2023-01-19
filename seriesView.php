@@ -85,6 +85,18 @@ if ($error == 0) {
     <?php
     include 'models/navbar.php';
     ?>
+    <div id="overlay">
+        <div class="container" style="height: 100%">
+            <div class="row" style="height: 100%">
+                <div class="col align-self-center">
+                    <div class="text-center">
+                        <img src="" class="img-fluid" id="fullviewContainer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <div class="row justify-content-center mt-4 mb-2">
             <div class="col">
@@ -112,7 +124,7 @@ if ($error == 0) {
                                     <div class='card-body'>
                                         <div class='row align-items-center'>
                                             <div class='col'>
-                                                <h5 class=' m-0'>#$number</h5>
+                                                <h5 class=' m-0'>#$id</h5>
                                             </div>
                                             <div class='col'>
                                                 <span style='display: flex;flex-direction: row-reverse;'><a href='${basUrl}/painting.php?p=$id' class='btn btn-dark btn-sm pr-2 req'>mehr</a></span>
@@ -155,6 +167,7 @@ if ($error == 0) {
     include 'models/footer.php';
     ?>
 
+    <script type="text/javascript" src="static\js\runViewer.js"></script>
 </body>
 
 </html>

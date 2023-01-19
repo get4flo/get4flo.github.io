@@ -59,13 +59,15 @@
         <div class="container" style="height: 100%">
             <div class="row" style="height: 100%">
                 <div class="col align-self-center">
-                    <img src="" class="img-fluid" id="fullviewContainer">
+                    <div class="text-center">
+                        <img src="" class="img-fluid" id="fullviewContainer">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="container py-4 gallery">
+    <div class="container pt-4 gallery">
         <div class="py-4 pl-3">
             <div class="row justify-content-center">
                 <div class="col-xs-10 col-lg-8">
@@ -81,7 +83,7 @@
             </div>
         </div>
 
-        <hr style="width:80%;background-color:gray;text-align:center; margin-top: 100px; margin-bottom: 150px;">
+        <hr style="width:80%;background-color:gray;text-align:center; margin-top: 50px; margin-bottom: 75px;">
 
         <?php
             for($i=0; $i<3; $i++){
@@ -97,7 +99,7 @@
 				    </div>
 			    </div>";
 
-                for($j=0; $j<2; $j++){
+                for($j=0; $j<1; $j++){
                     echo '<div class="row py-lg-4">';
                     for($k=0; $k<3; $k++){
                         global $currentK;
@@ -117,7 +119,7 @@
                                     <div class=\"card-body\">
                                         <div class=\"row align-items-center\">
                                             <div class=\"col\">
-                                                <h5 class=\"m-0\">#$num</h5>
+                                                <h5 class=\"m-0\">#$id</h5>
                                             </div>
                                             <div class=\"col\">
                                                 <span style=\"display: flex;flex-direction: row-reverse;\"><a href=\"${basUrl}/painting.php?p=$id\" class=\"btn btn-dark btn-sm pr-2 req\">mehr</a></span>
@@ -142,9 +144,9 @@
 
     </div>
 
-    <hr class="my-lg-5" style="width:80%;background-color:gray;text-align:center;">
+    <div class="container pb-4" id="kuenstler">
+        <hr style="width:80%;background-color:gray;text-align:center; margin-bottom: 100px;">
 
-    <div class="container-fluid py-4" id="kuenstler">
 			<div class="row">
 				<div class="col-lg">
 					<div class="text-center">
@@ -167,7 +169,7 @@
                     </p>
 				</div>
 			</div>
-		<div style="height: 200px"></div>
+		<div style="height: 100px"></div>
     </div>
     
     <?php

@@ -3,7 +3,9 @@ var fullDiv = document.getElementById('fullviewContainer');
 var overlay = document.getElementById('overlay');
 
 function fullview(e){
-	fullDiv.src = e.src;
+	var value = e.src
+	value = value.substring(0, 32) + "/fullview/" + value.substring(44,value.length);
+	fullDiv.src = value;
 	overlay.style.display = "block";
 }
 
