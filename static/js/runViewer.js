@@ -4,7 +4,10 @@ var overlay = document.getElementById('overlay');
 
 function fullview(e){
 	var value = e.src
-	value = value.substring(0, 32) + "/fullview/" + value.substring(44,value.length);
+	var offset1 = value.includes("localhost") ? 32 : 45;
+	var offset2 = value.includes("localhost") ? 44 : 57;
+	value = value.substring(0, offset1) + "/fullview/" + value.substring(offset2, value.length);
+	value = value.replace("jpg", "JPG")
 	fullDiv.src = value;
 	overlay.style.display = "block";
 }
